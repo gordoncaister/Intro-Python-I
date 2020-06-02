@@ -35,14 +35,18 @@ from datetime import datetime
 
 l = len(sys.argv)
 if l==1:
-    print(datetime()) 
+    month = datetime.now().month
+    year = datetime.now().year
+    print(calendar.month(year,month))
 elif l==2:
-    month = sys.argv[1]
-    print(calendar.itermonthdates(month,2020))
+    print(l)
+    print(sys.argv)
+    month = int(sys.argv[1])
+    print(calendar.month(2020,month))
 elif l==3:
-    month = sys.argv[1]
-    year = sys.argv[2]  
-    print(calendar.itermonthdates(month,year))
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+    print(calendar.month(year,month))
 else:
     print("input your month followed by year in your call to run the file, like so: python3 14_cal.py 4 2015")
         
