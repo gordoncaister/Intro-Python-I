@@ -30,3 +30,24 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+
+l = len(sys.argv)
+if l==1:
+    print(datetime()) 
+elif l==2:
+    month = sys.argv[1]
+    print(calendar.itermonthdates(month,2020))
+elif l==3:
+    month = sys.argv[1]
+    year = sys.argv[2]  
+    print(calendar.itermonthdates(month,year))
+else:
+    print("input your month followed by year in your call to run the file, like so: python3 14_cal.py 4 2015")
+        
+
+
+
+
+
