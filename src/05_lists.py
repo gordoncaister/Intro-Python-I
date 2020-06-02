@@ -5,13 +5,15 @@ x = [1, 2, 3]
 y = [8, 9, 10]
 
 # For the following, DO NOT USE AN ASSIGNMENT (=).
-
+x.append(4)
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE
 print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
+for number in y:
+    x.append(number)
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
